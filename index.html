@@ -446,7 +446,7 @@ function getBadge(who) {
 function renderList() {
   const pending=items.filter(i=>!i.done&&(activeFilter==='all'||i.cat===activeFilter));
   const done=items.filter(i=>i.done&&(activeFilter==='all'||i.cat===activeFilter));
-  const catOrder=['vegetables','fruits','dairy','bakery','meat','accessories','other'];
+  const catOrder = ['vegetables','fruits','dairy','bakery','meat','accessories','pharm','other'];
   const groups={}; catOrder.forEach(c=>groups[c]=[]);
   pending.forEach(i=>{if(groups[i.cat])groups[i.cat].push(i);});
   let html='';
